@@ -1,0 +1,2 @@
+[console_scripts]
+alien-fingers = alien_finger.cli:app
