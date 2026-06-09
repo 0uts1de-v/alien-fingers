@@ -44,6 +44,8 @@ class Config:
     dangerously_allow_blocked_actions: bool = False
     log_sessions: bool = True
     max_steps: int = 8
+    openai_compatible_api_key: str | None = None
+    openai_compatible_base_url: str | None = None
 
     @classmethod
     def defaults(cls) -> "Config":
@@ -68,6 +70,8 @@ ENV_OVERRIDES: dict[str, tuple[str, type]] = {
     "dangerously_allow_blocked_actions": ("ALIEN_FINGERS_DANGEROUSLY_ALLOW_BLOCKED_ACTIONS", bool),
     "log_sessions": ("ALIEN_FINGERS_LOG_SESSIONS", bool),
     "max_steps": ("ALIEN_FINGERS_MAX_STEPS", int),
+    "openai_compatible_api_key": ("OPENAI_COMPATIBLE_API_KEY", str),
+    "openai_compatible_base_url": ("OPENAI_COMPATIBLE_BASE_URL", str),
 }
 
 

@@ -51,14 +51,7 @@ def build_provider(cfg: Config, *, safety: bool = False) -> ChatProvider:
             )
         )
     if provider_name == "openai_compatible":
-        return OpenAICompatibleProvider(
-            ProviderConfig(
-                provider="openai_compatible",
-                model=model,
-                api_key=os.environ.get("OPENAI_COMPATIBLE_API_KEY"),
-                base_url=os.environ.get("OPENAI_COMPATIBLE_BASE_URL"),
-            )
-        )
+        return OpenAICompatibleProvider()
     raise ProviderError(f"Unsupported provider: {provider_name}")
 
 
